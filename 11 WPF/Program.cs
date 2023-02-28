@@ -31,7 +31,7 @@ namespace AD11
                 builder.RegisterInstance(logger).As<ILogger>();
                 builder.RegisterType<ViewModelRunner>().As<IViewModelRunner>().SingleInstance();
                 builder.RegisterType<MainWindowViewModel>().As<IMainWindowViewModel>();
-                builder.RegisterType<App>().As<IDispatcherHelper>().AsSelf().SingleInstance();
+                builder.RegisterType<App>().AsSelf().SingleInstance();
 
                 using var container = builder.Build();
 

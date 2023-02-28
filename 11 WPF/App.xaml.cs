@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Threading.Tasks;
 using System.Windows;
 using AD11.Infrastructure;
 using AD11.MainWindow;
@@ -7,7 +6,7 @@ using Serilog;
 
 namespace AD11
 {
-    public partial class App : IDispatcherHelper
+    public partial class App
     {
         private readonly ILogger _logger;
         private readonly IViewModelRunner _viewModelRunner;
@@ -42,27 +41,6 @@ namespace AD11
             {
                 Shutdown();
             }
-        }
-
-        async Task IDispatcherHelper.RunAsync(Action action)
-        {
-            if (Dispatcher.CheckAccess())
-            {
-                action();
-                return;
-            }
-
-            await Dispatcher.InvokeAsync(action);
-        }
-
-        async Task<T> IDispatcherHelper.RunAsync<T>(Func<T> action)
-        {
-            if (Dispatcher.CheckAccess())
-            {
-                return action();
-            }
-
-            return await Dispatcher.InvokeAsync(action);
         }
     }
 }
