@@ -1,9 +1,9 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
-		<OutputType>Exe</OutputType>
+		<OutputType>exe</OutputType>
 		<TargetFramework>net7.0</TargetFramework>
-		<RootNamespace>AD01</RootNamespace>
+		<RootNamespace>AD04</RootNamespace>
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>enable</Nullable>
 	</PropertyGroup>

@@ -1,0 +1,12 @@
+﻿<Application x:Class="AD11.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:AD11"
+             ShutdownMode="OnExplicitShutdown">
+    <Application.Resources>
+         <SolidColorBrush x:Key="WhiteBrush" Color="White" />
+         <SolidColorBrush x:Key="YellowBrush" Color="Yellow" />
+         <SolidColorBrush x:Key="BlueBrush" Color="LightBlue" />
+         <ImageBrush x:Key="GreenBrush" ImageSource="/Resources/green.jpg" Stretch="Fill" />
+    </Application.Resources>
+</Application>
